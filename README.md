@@ -7,11 +7,19 @@ This example assumes you know how to run Docker.
 
 This is not an official Google product.
 
+Building the Container
+----------------------
+Nothing special if you already have Docker installed:
+
+    $ git clone https://github.com/saturnism/deepdream-cli-docker.git
+    $ cd deepdream-cli-docker.git
+    $ docker build -t deepdream-cli .
+
 Running the Container
 ---------------------
 To run this container:
 
-    $ docker run -i saturnism/deepdream-cli -h
+    $ docker run deepdream-cli -h
     $ cat myimage.jpg | docker run -i saturnism/deepdream-cli > output.jpg
     $ cat myimage.jpg | docker run -i saturnism/deepdream-cli -l conv2/3x3 > output.jpg
 
