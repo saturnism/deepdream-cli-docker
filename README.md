@@ -27,7 +27,7 @@ Running in the Background
 -------------------------
 Rather than waiting for the images to be outputed to STDOUT, you can also pipe the image to the container filesystem and get it later:
 
-    $ cat myimage.jpg | docker run -i /bin/bash -c "saturnism/deepdream-cli > /tmp/output.jpg" &
+    $ cat myimage.jpg | docker run -i saturnism/deepdream-cli /bin/bash -c "/deepdream/deepdream.py > /tmp/output.jpg" &
     
 Find the container ID:
 
