@@ -19,15 +19,18 @@ Running the Container
 ---------------------
 To run this container:
 
-    $ docker run deepdream-cli -h
-    $ cat myimage.jpg | docker run -i saturnism/deepdream-cli > output.jpg
-    $ cat myimage.jpg | docker run -i saturnism/deepdream-cli -l conv2/3x3 > output.jpg
+    $ cat myimage.jpg | docker run -i deepdream-cli > output.jpg
+    $ cat myimage.jpg | docker run -i deepdream-cli /deepdream/deepdream.py -l conv2/3x3 > output.jpg
+    
+To see all of the available arguments:
+
+    $ docker run -i deepdream-cli /deepdream/deepdream.py -h
 
 Running in the Background
 -------------------------
 Rather than waiting for the images to be outputed to STDOUT, you can also pipe the image to the container filesystem and get it later:
 
-    $ cat myimage.jpg | docker run -i saturnism/deepdream-cli /bin/bash -c "/deepdream/deepdream.py > /tmp/output.jpg" &
+    $ cat myimage.jpg | docker run -i deepdream-cli /bin/bash -c "/deepdream/deepdream.py > /tmp/output.jpg" &
     
 Find the container ID:
 
