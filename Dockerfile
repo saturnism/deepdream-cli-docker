@@ -54,4 +54,4 @@ ENV PYTHONPATH=/deepdream/caffe/distribute/python
 
 ADD deepdream.py deepdream.py
 
-CMD ["./deepdream.py"]
+ENTRYPOINT ["./deepdream.py"]

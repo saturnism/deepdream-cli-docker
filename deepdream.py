@@ -27,11 +27,11 @@ from google.protobuf import text_format
 import caffe
 
 parser = OptionParser()
-parser.add_option("-i", "--iterations", dest="iterations", default=10,
+parser.add_option("-i", "--iterations", dest="iterations", type="int", default=10,
                   help="Iterations")
-parser.add_option("-o", "--octaves", dest="octaves", default=4,
+parser.add_option("-o", "--octaves", dest="octaves", type="int", default=4,
                   help="Octatves")
-parser.add_option("-s", "--scale", dest="scale", default=1.4,
+parser.add_option("-s", "--scale", dest="scale", type="float", default=1.4,
                   help="Octatves Scale")
 parser.add_option("-l", "--layer", dest="layer", default="inception_4c/output",
                   help="Layer")
