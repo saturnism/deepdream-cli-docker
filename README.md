@@ -20,11 +20,11 @@ Running the Container
 To run this container:
 
     $ cat myimage.jpg | docker run -i deepdream-cli > output.jpg
-    $ cat myimage.jpg | docker run -i deepdream-cli ./deepdream.py -l conv2/3x3 > output.jpg
+    $ cat myimage.jpg | docker run -i deepdream-cli -l conv2/3x3 > output.jpg
     
 To see all of the available arguments:
 
-    $ docker run -i deepdream-cli ./deepdream.py -h
+    $ docker run -i deepdream-cli -h
 
 Running in the Background
 -------------------------
